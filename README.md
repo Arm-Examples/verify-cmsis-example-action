@@ -1,6 +1,6 @@
-# verify-cmsis-example-action
+# Verify CMSIS example action
 
-This repository contains the GitHub action used to verify if a CMSIS project is compatible with CMSIS tools.
+This repository contains the GitHub action used to verify if a CMSIS project is compatible with [CMSIS ecosystem](https://www.keil.arm.com/cmsis).
 
 ## Usage
 
@@ -9,18 +9,17 @@ In the steps in your workflow file:
 - uses: Arm-Examples/verify-cmsis-example-action@latest
   with:
     branch:       # Branch to get the project from if not `main`
-    project-file: # Path to the project to verify (file with `.csolution.yml` extension etc.) (required)
-    API_TOKEN:    # API token for publishing projects (required)
+    project-file: # Path to the project to verify (e.g. file in the repository with `.csolution.yml` extension, etc.) (required)
+    API_TOKEN:    # API token to access Arm Online services (required)
 ```
 
 All inputs marked with `(required)` are required.
 
 ### Example usage
 
-This action will attempt to extract some information from a project using CMSIS tools in order to validate whether a project is valid. If it passes then it should be uploadable to [keil.arm.com](https://keil.arm.com).
+This action will attempt to extract some information from a project using [CMSIS tools](https://github.com/Open-CMSIS-Pack/devtools) in order to validate whether a project is valid or not according to CMSIS specification. If it passes, then the project will be compatible with any CMSIS tools including [CMSIS toolbox](https://github.com/Open-CMSIS-Pack/cmsis-toolbox), KEIL MDK v6, [Keil Studio Cloud](https://studio.keil.arm.com/cmsis).
 
-Any project verified with this action will be compatible with [Keil Studio Cloud](https://studio.keil.arm.com/).
-
+Hereafter is an example of a github action workflow which can be included in any CMSIS repository for Continuous Integration check before merge.
 ```yaml
 # ci.yml
 name: CI
@@ -47,4 +46,4 @@ jobs:
 
 ## API Token Access
 
-Use of this GitHub Action requires an API token. To request a token for use in your own organization please contact any of the repository contributors.
+Use of this GitHub Action requires an API key. To request a token for use in your own organization, please contact any of the repository contributors or support@arm.com.
