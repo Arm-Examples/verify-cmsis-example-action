@@ -28,7 +28,7 @@ runs:
         sudo apt-get clean
     - name: Verify project
       run: |
-        verify-cmsis-example-sdk verify --project-dir ${{ github.workspace }} --project-path ${{ inputs.project-file }} --out-dir out --bearer-token ${{ inputs.API_TOKEN }} --log-error 2
+        verify-cmsis-example-sdk verify --project-dir ${{ github.workspace }} --project-path ${{ inputs.project-file }} --out-dir out --api-key ${{ inputs.API_TOKEN }} --log-error 2
       shell: bash
     - name: Upload any artifacts
       uses: actions/upload-artifact@v4
