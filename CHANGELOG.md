@@ -2,6 +2,19 @@
 Copyright (C) 2020-2024 Arm Limited or its affiliates and Contributors. All rights reserved.
 SPDX-License-Identifier: Apache-2.0
 -->
+"0.2.0" (2024-06-17)
+====================
+
+Features
+--------
+
+- :sparkles: Add output-artifact input to override default value (#202406171554)
+
+
+<!--
+Copyright (C) 2020-2024 Arm Limited or its affiliates and Contributors. All rights reserved.
+SPDX-License-Identifier: Apache-2.0
+-->
 "0.1.0" (2024-06-17)
 ====================
 
