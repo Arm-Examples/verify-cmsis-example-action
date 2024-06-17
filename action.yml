@@ -12,6 +12,10 @@ inputs:
   project-file:
     description: "Path to the project to publish (file with `.csolution.yml` extension) (required) "
     required: true
+  output-artifact:
+    description: "Name of the GitHub artifact where the outputs from this verification job will be stored"
+    default: generated-outputs
+    required: true
   API_TOKEN:
     description: "API token for accessing online services"
     required: true
@@ -33,7 +37,7 @@ runs:
     - name: Upload any artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: generated-outputs
+        name: ${{ inputs.output-artifact }}
         if-no-files-found: ignore
         path: out
 
