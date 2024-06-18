@@ -41,7 +41,7 @@ jobs:
       - uses: actions/checkout@v4 # this repo
       - uses: actions/checkout@v4 # test repo
         with: 
-          repository: Arm-Examples/Hello_LPCXpresso55S69
+          repository: Arm-Examples/AVH-MLOps_Examples
           path: test2
       - uses: ./
         name: Import Project Action
