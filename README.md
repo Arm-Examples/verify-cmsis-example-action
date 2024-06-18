@@ -10,7 +10,7 @@ In the steps in your workflow file:
   with:
     branch:            # Branch to get the project from if not `main`
     project-file:      # Path to the project (relative to the project-directory) to verify (e.g. file in the repository with `.csolution.yml` extension, etc.) (required)
-    project-directory: # Path to the project directory (defaults to the root of the GitHub repository)
+    project-directory: # Path to the project directory (defaults to the root of the GitHub repository). This should be used if the repository contains several independent projects
     output-artifact:   # Optional name override for the generated artifacts. Needed if running the action multiple times in one run so that artifacts don't conflict with eachother
     API_TOKEN:         # API token to access Arm Online services (required)
 ```

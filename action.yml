@@ -13,7 +13,7 @@ inputs:
     description: "Path to the project to publish relative to the root of the project directory (file with `.csolution.yml` extension) (required)"
     required: true
   project-directory:
-    description: "Path to the project directory (defaults to the root of the GitHub repository)"
+    description: "Path to the project directory (defaults to the root of the GitHub repository). This should be used if the repository contains several independent projects."
     required: true
     default: ${{ github.workspace }}
   output-artifact:
