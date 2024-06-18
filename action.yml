@@ -10,8 +10,12 @@ inputs:
     required: false
     default: ${{ github.head_ref }}
   project-file:
-    description: "Path to the project to publish (file with `.csolution.yml` extension) (required) "
+    description: "Path to the project to publish relative to the root of the project directory (file with `.csolution.yml` extension) (required)"
     required: true
+  project-directory:
+    description: "Path to the project directory (defaults to the root of the GitHub repository)"
+    required: true
+    default: ${{ github.workspace }}
   output-artifact:
     description: "Name of the GitHub artifact where the outputs from this verification job will be stored"
     default: generated-outputs
@@ -32,7 +36,7 @@ runs:
         sudo apt-get clean
     - name: Verify project
       run: |
-        verify-cmsis-example-sdk verify --project-dir ${{ github.workspace }} --project-path ${{ inputs.project-file }} --out-dir out --api-key ${{ inputs.API_TOKEN }} --log-error 2
+        verify-cmsis-example-sdk verify --project-dir ${{ inputs.project-directory }} --project-path ${{ inputs.project-file }} --out-dir out --api-key ${{ inputs.API_TOKEN }} --log-error 2
       shell: bash
     - name: Upload any artifacts
       uses: actions/upload-artifact@v4
