@@ -32,7 +32,7 @@ jobs:
           branch: main
           project-file: ./test/hello.csolution.yml
           output-artifact: test-1
-          API_TOKEN: ${{ secrets.API_TOKEN }}
+          API_TOKEN: ${{ secrets.CMSIS_API_KEY }}
           
   verify-cmsis-example-action-test-2:
     name: Integration Tests 2
@@ -50,4 +50,4 @@ jobs:
           project-file: ./blink.csolution.yml
           project-directory: ./test2/example1_cm4_mps2_an386
           output-artifact: test-2
-          API_TOKEN: ${{ secrets.API_TOKEN }}
+          API_TOKEN: ${{ secrets.CMSIS_API_KEY }}

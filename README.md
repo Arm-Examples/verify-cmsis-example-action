@@ -43,7 +43,7 @@ jobs:
         with:
           branch: ${{ github.ref }}
           project-file: ./hello.csolution.yml
-          API_TOKEN: ${{ secrets.API_TOKEN }}
+          API_TOKEN: ${{ secrets.CMSIS_API_KEY }}
 ```
 
 ## API Token Access
