@@ -41,13 +41,13 @@ jobs:
       - uses: actions/checkout@v4 # this repo
       - uses: actions/checkout@v4 # test repo
         with: 
-          repository: Arm-Examples/AVH-MLOps_Examples
+          repository: Arm-Examples/EW2024_CMSIS-Toolbox
           path: test2
       - uses: ./
         name: Import Project Action
         with:
           branch: main
-          project-file: ./MLOps.csolution.yml
-          project-directory: ./test2/QeexoAutoML
+          project-file: ./blink.csolution.yml
+          project-directory: ./test2/example1_cm4_mps2_an386
           output-artifact: test-2
           API_TOKEN: ${{ secrets.API_TOKEN }}
