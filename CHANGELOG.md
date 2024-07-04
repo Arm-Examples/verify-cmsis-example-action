@@ -2,6 +2,19 @@
 Copyright (C) 2020-2024 Arm Limited or its affiliates and Contributors. All rights reserved.
 SPDX-License-Identifier: Apache-2.0
 -->
+"0.3.2" (2024-07-04)
+====================
+
+Bugfixes
+--------
+
+- :bug: Show the exit code for debug purposes (#20240704095003)
+
+
+<!--
+Copyright (C) 2020-2024 Arm Limited or its affiliates and Contributors. All rights reserved.
+SPDX-License-Identifier: Apache-2.0
+-->
 "0.3.1" (2024-07-04)
 ====================
 
