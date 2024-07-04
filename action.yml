@@ -37,6 +37,11 @@ runs:
     - name: Verify project
       run: |
         verify-cmsis-example-sdk verify --project-dir ${{ inputs.project-directory }} --project-path ${{ inputs.project-file }} --out-dir out --api-key ${{ inputs.API_TOKEN }} --log-error 2
+        status=$?
+        if [ $status -ne 0 ]; then
+          echo "::error::Verification of CMSIS project failed"
+          exit 1
+        fi
       shell: bash
     - name: Upload any artifacts
       uses: actions/upload-artifact@v4
