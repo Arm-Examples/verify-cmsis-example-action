@@ -2,6 +2,19 @@
 Copyright (C) 2020-2024 Arm Limited or its affiliates and Contributors. All rights reserved.
 SPDX-License-Identifier: Apache-2.0
 -->
+"0.3.4" (2024-07-04)
+====================
+
+Bugfixes
+--------
+
+- :bug: Check if the GITHUB_STEP_SUMMARY is set in order to determine if an error occurred (#20240704104333)
+
+
+<!--
+Copyright (C) 2020-2024 Arm Limited or its affiliates and Contributors. All rights reserved.
+SPDX-License-Identifier: Apache-2.0
+-->
 "0.3.3" (2024-07-04)
 ====================
 
