@@ -38,6 +38,7 @@ runs:
       run: |
         verify-cmsis-example-sdk verify --project-dir ${{ inputs.project-directory }} --project-path ${{ inputs.project-file }} --out-dir out --api-key ${{ inputs.API_TOKEN }} --log-error 2
         status=$?
+        echo "verify-cmsis-example-sdk exited with: $status"
         if [ $status -ne 0 ]; then
           echo "::error::Verification of CMSIS project failed"
           exit 1
