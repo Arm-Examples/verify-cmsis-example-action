@@ -21,8 +21,8 @@ jobs:
     name: Integration Tests 1
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4 # this repo
-      - uses: actions/checkout@v4 # test repo
+      - uses: actions/checkout@v5 # this repo
+      - uses: actions/checkout@v5 # test repo
         with: 
           repository: Arm-Examples/Hello_LPCXpresso55S69
           path: test
@@ -38,8 +38,8 @@ jobs:
     name: Integration Tests 2
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4 # this repo
-      - uses: actions/checkout@v4 # test repo
+      - uses: actions/checkout@v5 # this repo
+      - uses: actions/checkout@v5 # test repo
         with: 
           repository: Arm-Examples/EW2024_CMSIS-Toolbox
           path: test2
